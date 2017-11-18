@@ -1,0 +1,154 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearfix{
+    float: nose;
+    clear: both;
+    text-decoration: none;
+    list-style: nose;
+}
+
+#content{
+    width: 98%;
+    min-height: 500px;
+    margin:  0px auto;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ddd;
+    background:  #eee;
+}
+
+header{
+    padding: 15px;
+    background: #229138;
+}
+
+header .title-subtitle{
+    float: left;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    color: white;
+    padding: 20px;
+}
+header h1, header p{
+    margin:  0px;
+    margin-left:  15px;
+}
+
+header p {
+    color: #eee;
+}
+
+.btn{
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-color: #1976d2;
+    border-radius: 4px;
+    box-shadow: 0px, 0px, 5px, #ddd;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    background: #0074d9;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn-eliminar{
+    background: red;
+    border-color: red;
+}
+
+.btn-agregar{
+    background: green;
+    border-color: green;
+}
+
+.btn-detalle, .btn-departamentos{
+    background: yellowgreen;
+    border-color: yellowgreen;
+}
+
+.btn-departamentos, .btn-empleados{
+    margin-top: 20px;
+    margin: 10px;
+}
+
+#departamentos-list{
+    padding: 0px;
+    margin: 0px;
+}
+
+.departamento-item, .empleado-item{
+    list-style: none;
+    width: 30%;
+    border: 1px solid #ddd;
+    float: left;
+    height: 80px;
+    padding-top: 20px;
+    padding-bottom:  20px;
+    color: gray;
+    background: white;
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: 0px, 0px, 5px, #ddd;
+}
+
+.departamento-item h4, .empleado-item h4{
+    color: #444;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+}
+
+.departamento-item .content-data , .empleado-item .content-data{
+    float: left;
+    margin-left: 20px;
+}
+footer{
+    width: 80%;
+    margin:  0px auto;
+    margin-top: 20px;
+    color: gray;
+}
+
+
+.empleado-box{
+    list-style: none;
+    width: 90%;
+    border: 1px solid #ddd;
+    float: left;
+    min-height:170px;
+    padding-top: 20px;
+    padding-bottom:  20px;
+    color: black;
+    background: white;
+    margin: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 0px, 0px, 5px, #ddd;
+}
+
+.empleado-box p{
+    margin:  15px;
+    margin-left:  15px;
+}
+
+.empleado-box h1{
+    margin-left:  5px;
+}
+
+.seguro{
+    height: 100px;
+    margin-top: -95px;
+    background: white;
+    position: absolute;
+    border-color: red;
+    border-radius: 4px;
+    width: 256px;
+    text-align: center;
+}
+
+
+

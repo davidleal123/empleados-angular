@@ -1,0 +1,35 @@
+<strong>{{title}}</strong>
+<br>
+<br>
+<a [routerLink]="['/departamento-agregar']" class="btn btn-agregar">
+    Agregar departamento
+</a>
+
+<ul id="departamentos-list>">
+    <li *ngFor="let departamento of departamentos" class="departamento-item">
+        <div class="content-data">
+            <h4>{{departamento.descripcion}}</h4>
+            <p class="buttons">
+                <a [routerLink]="['/departamento-editar', departamento.puesto]" class="btn btn-editar">
+                    Editar
+                </a>
+                <a (click)="onDeleteConfirm(departamento.puesto)" class="btn btn-eliminar">
+                    Eliminar
+                </a>
+            </p>
+            <div class="seguro" *ngIf="confirmar == departamento.puesto">
+                <p>
+                    <strong>¿Estas seguro de querer borrar el departamento?</strong>
+                </p>
+                <br>
+                <br>
+                <a (click)="onDeleteDepartamento(departamento.puesto)" class="btn btn-eliminar">
+                    Eliminar
+                </a>
+                <a (click)="onCancelarConfirm(departamento.puesto)" class="btn btn-cancelar">
+                    Cancelar
+                </a>
+            </div>
+        </div>
+    </li>
+</ul>

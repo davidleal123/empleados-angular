@@ -1,0 +1,18 @@
+<div class="empleado-box">
+        
+            <h2>Actualizar Departamento</h2>
+            <br>
+            <br>
+             <form #formDepartamento="ngForm" (ngSubmit)="onSubmit()" >
+                <label>Descripcion</label>
+                <p>
+                    <textarea name="descripcion"  #descripcion="ngModel" [(ngModel)]="departamento.descripcion"
+                    required></textarea>
+                    <span *ngIf="descripcion.touched && !descripcion.valid">La descripcion no es correcta</span>
+                </p>
+        
+                <p>
+                    <input type="submit" value="Actualizar!" />
+                </p>
+                </form>
+            </div>

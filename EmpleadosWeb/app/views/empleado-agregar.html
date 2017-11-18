@@ -1,0 +1,47 @@
+<div class="empleado-box">
+
+    <h2>Nuevo Empleado</h2>
+    <br>
+    <br>
+    <form #formEmpelado="ngForm" (ngSubmit)="onSubmit()">
+        <label>Nombre</label>
+        <p>
+            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="empleado.nombre" required/>
+            <span *ngIf="nombre.touched && !nombre.valid">El nombre no es Correcto</span>
+        </p>
+        <label>Apellido Paterno</label>
+        <p>
+            <input type="text" name="ApPaterno" #ApPaterno="ngModel" [(ngModel)]="empleado.ApPaterno" required/>
+            <span *ngIf="ApPaterno.touched && !ApPaterno.valid">El Apellido Paterno no es Correcto</span>
+        </p>
+        <label>Apellido Materno</label>
+        <p>
+            <input type="text" name="ApPaterno" #ApMaterno="ngModel" [(ngModel)]="empleado.ApMaterno" required/>
+            <span *ngIf="ApMaterno.touched && !ApMaterno.valid">El Apellido Materno no es Correcto</span>
+        </p>
+        <label>Puesto</label>
+        <p>
+            <select name="departamentos" [(ngModel)] ="empleado.departamento">
+                <option *ngFor='let depto of departamentos' [ngValue]="depto.puesto"   >
+                    {{depto.descripcion}}
+                </option>
+            </select>
+        </p>
+        <label>Fecha de Nacimiento</label>
+        
+        <p>
+                <input type="date" name="cumpleanios" step="1" min="1900-01-01" max="3000-12-31" value="2013-01-01" [(ngModel)]="empleado.Fecnac">
+        </p>
+
+
+
+        <label>Sueldo</label>
+        <p>
+            <input type="number" name="sueldo" #sueldo="ngModel" [(ngModel)]="empleado.sueldo" required/>
+            <span *ngIf="sueldo.touched && !sueldo.valid">El sueldo no es Correcto</span>
+        </p>
+        <p>
+            <input type="submit" value="Dar de alta!" />
+        </p>
+    </form>
+</div>

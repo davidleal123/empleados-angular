@@ -1,0 +1,38 @@
+<h2>Lista de Empleados</h2>
+<br>
+<br>
+<a [routerLink]="['/empleado-agregar']" class="btn btn-agregar">
+    Agregar Empleado
+</a>
+
+<ul id="empleados-list>">
+    <li *ngFor="let empleado of empleados" class="empleado-item">
+        <div class="content-data">
+            <h4>{{empleado.nombre +' ' + empleado.ApPaterno + " " + empleado.ApMaterno}}</h4>
+            <p class="buttons">
+                <a [routerLink]="['/empleado-detalle', empleado.Clave_emp]" class="btn btn-detalle">
+                    Detalle
+                </a>
+                <a [routerLink]="['/empleado-editar', empleado.Clave_emp]" class="btn btn-editar">
+                    Editar
+                </a>
+                <a (click)="onDeleteConfirm(empleado.Clave_emp)" class="btn btn-eliminar">
+                    Eliminar
+                </a>
+            </p>
+            <div class="seguro" *ngIf="confirmar == empleado.Clave_emp">
+                <p>
+                    <strong>¿Estas seguro de querer borrar el departamento?</strong>
+                </p>
+                <br>
+                <br>
+                <a (click)="onDeleteDepartamento(empleado.Clave_emp)" class="btn btn-eliminar">
+                    Eliminar
+                </a>
+                <a (click)="onCancelarConfirm(empleado.Clave_emp)" class="btn btn-cancelar">
+                    Cancelar
+                </a>
+            </div>
+        </div>
+    </li>
+</ul>

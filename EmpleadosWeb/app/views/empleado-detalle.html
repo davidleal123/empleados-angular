@@ -1,0 +1,19 @@
+<div class="empleado-box" *ngIf="Empleado">
+    <h2>Detalle de Empleado</h2>
+    <h1>Nombre del Empleado</h1>
+    <p class = "nombre">{{Empleado.nombre +" " + Empleado.ApPaterno +" " + Empleado.ApMaterno}}</p>
+    <h1>Fecha de nacimiento</h1>    
+    <p class = "fecnac">{{Empleado.Fecnac}}</p>
+    <h1>Area de desarrollo</h1>    
+    <p class = "puesto">{{Empleado.descripcion}}</p>
+    <h1>Sueldo</h1>    
+    <p class = "sueldo">{{Empleado.sueldo}}</p>
+
+    <a href="google.com" target="_blank" class="btn btn-editar">
+            Editar
+        </a>
+        <a href="google.com" target="_blank" class="btn btn-eliminar">
+            Eliminar
+        </a>
+    
+</div>
